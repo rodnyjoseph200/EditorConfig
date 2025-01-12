@@ -1,0 +1,2 @@
+# EditorConfig
+Custom EditorConfig
