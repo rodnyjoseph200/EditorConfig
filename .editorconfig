@@ -9,9 +9,9 @@ root = true
 # C# files
 [*.cs]
 
-###################################
-#### Core EditorConfig Options ####
-###################################
+###############################################
+########## Core EditorConfig Options ##########
+###############################################
 
 # indent_size defines the number of spaces used for each indentation level.
 indent_size = 4
@@ -30,9 +30,9 @@ end_of_line = crlf
 # insert_final_newline specifies whether to ensure the file ends with a newline.
 insert_final_newline = false
 
-#################################
-#### .NET Coding Conventions ####
-#################################
+#############################################
+########## .NET Coding Conventions ##########
+#############################################
 
 # dotnet_separate_import_directive_groups controls whether using directives are separated into groups by blank lines.
 dotnet_separate_import_directive_groups = false
@@ -291,7 +291,9 @@ dotnet_style_allow_multiple_blank_lines_experimental = false:warning
 # DoSomethingElse();
 dotnet_style_allow_statement_immediately_after_block_experimental = false:warning
 
-#### C# Coding Conventions ####
+###########################################
+########## C# Coding Conventions ##########
+###########################################
 
 # csharp_style_var_elsewhere controls whether to use var for all variables, except built-in types or apparent cases.
 # Example:
@@ -649,7 +651,9 @@ csharp_style_allow_blank_lines_between_consecutive_braces_experimental = false:w
 # }
 csharp_style_allow_embedded_statements_on_same_line_experimental = false:warning
 
-#### C# Formatting Rules ####
+#########################################
+########## C# Formatting Rules ##########
+#########################################
 
 # csharp_new_line_before_catch enforces a new line before 'catch'.
 # Example:
@@ -949,7 +953,9 @@ csharp_preserve_single_line_blocks = true
 # if consistent with style
 csharp_preserve_single_line_statements = true
 
-#### Naming styles ####
+###################################
+########## Naming styles ##########
+###################################
 
 # dotnet_naming_rule.interface_should_be_begins_with_i enforces interface names start with 'I'.
 # Example:
