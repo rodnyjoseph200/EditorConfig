@@ -1,8 +1,16 @@
 # .NET EditorConfig
 
+>## Welcome
+>The .editorconfig file provided in this repo contains opinionated settings. Feel free to use as is or update to your liking.
+
+>For descriptions and examples of the rules in the editor config, see below \
+(Includes Table of Content)
+
+---
+
 <details>
 
-<summary> Table of Content </summary>
+<summary><h2> Table of Content </h2></summary>
 
 - [1. indent_size](#1-indent_size)
 - [2. indent_style](#2-indent_style)
@@ -148,7 +156,6 @@
 ---
 # `Rules`
 
----
 ## 1. indent_size  
 **Description**: Defines the number of spaces used for each indentation level.  
 
