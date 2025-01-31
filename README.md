@@ -1,4 +1,4 @@
-# Editorconfig
+# .NET Editorconfig
 
 <details>
 
