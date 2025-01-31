@@ -185,13 +185,13 @@
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 this.eventHandler?.Invoke(this, EventArgs.Empty);  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 eventHandler?.Invoke(this, EventArgs.Empty);  
-(code-block)  
+```  
 
 ---
 ## 10. dotnet_style_qualification_for_field  
@@ -199,13 +199,13 @@ eventHandler?.Invoke(this, EventArgs.Empty);
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 this.myField = 10;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 myField = 10;  
-(code-block)  
+```  
 
 ---
 ## 11. dotnet_style_qualification_for_method  
@@ -213,13 +213,13 @@ myField = 10;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 this.DoSomething();  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 DoSomething();  
-(code-block)  
+```  
 
 ---
 ## 12. dotnet_style_qualification_for_property  
@@ -227,13 +227,13 @@ DoSomething();
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 this.MyProperty = 5;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 MyProperty = 5;  
-(code-block)  
+```  
 
 ---
 ## 13. dotnet_style_predefined_type_for_locals_parameters_members  
@@ -241,13 +241,13 @@ MyProperty = 5;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 int x = 0;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 Int32 x = 0;  
-(code-block)  
+```  
 
 ---
 ## 14. dotnet_style_predefined_type_for_member_access  
@@ -255,13 +255,13 @@ Int32 x = 0;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 string.Empty;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 String.Empty;  
-(code-block)  
+```  
 
 ---
 ## 15. dotnet_style_parentheses_in_arithmetic_binary_operators  
@@ -269,13 +269,13 @@ String.Empty;
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 (a + b) * c;  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 a + b * c;  
-(code-block)  
+```  
 
 ---
 ## 16. dotnet_style_parentheses_in_other_binary_operators  
@@ -283,13 +283,13 @@ a + b * c;
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 (x & y) == 0;  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 x & y == 0;  
-(code-block)  
+```  
 
 ---
 ## 17. dotnet_style_parentheses_in_other_operators  
@@ -297,13 +297,13 @@ x & y == 0;
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 (int)x + 1;  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 (int)x + (1);  
-(code-block)  
+```  
 
 ---
 ## 18. dotnet_style_parentheses_in_relational_binary_operators  
@@ -311,13 +311,13 @@ Option 2
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 (a < b) == true;  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 a < b == true;  
-(code-block)  
+```  
 
 ---
 ## 19. dotnet_style_require_accessibility_modifiers  
@@ -325,13 +325,13 @@ a < b == true;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public void MyMethod() { }  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 void MyMethod() { }  
-(code-block)  
+```  
 
 ---
 ## 20. dotnet_style_coalesce_expression  
@@ -339,13 +339,13 @@ void MyMethod() { }
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var result = value ?? "default";  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var result = value != null ? value : "default";  
-(code-block)  
+```  
 
 ---
 ## 21. dotnet_style_collection_initializer  
@@ -353,16 +353,16 @@ var result = value != null ? value : "default";
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var list = new List<int> { 1, 2, 3 };  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var list = new List<int>();  
 list.Add(1);  
 list.Add(2);  
 list.Add(3);  
-(code-block)  
+```  
 
 ---
 ## 22. dotnet_style_explicit_tuple_names  
@@ -370,13 +370,13 @@ list.Add(3);
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 (int Id, string Name) person = (1, "John");  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 (int, string) person = (1, "John");  
-(code-block)  
+```  
 
 ---
 ## 23. dotnet_style_namespace_match_folder  
@@ -384,15 +384,15 @@ When False
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 // File: MyProject/Utilities/Logger.cs  
 namespace MyProject.Utilities;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 // File: MyProject/Utilities/Logger.cs  
 namespace SomeRandomName;  
-(code-block)  
+```  
 
 ---
 ## 24. dotnet_style_null_propagation  
@@ -400,13 +400,13 @@ namespace SomeRandomName;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var length = str?.Length;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var length = str == null ? 0 : str.Length;  
-(code-block)  
+```  
 
 ---
 ## 25. dotnet_style_object_initializer  
@@ -414,15 +414,15 @@ var length = str == null ? 0 : str.Length;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var person = new Person { Name = "Alice", Age = 30 };  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var person = new Person();  
 person.Name = "Alice";  
 person.Age = 30;  
-(code-block)  
+```  
 
 ---
 ## 26. dotnet_style_operator_placement_when_wrapping  
@@ -430,17 +430,17 @@ person.Age = 30;
 \
 **Examples**  
 Option 1 (beginning_of_line):  
-(code-block)csharp  
+```csharp  
 var sum = a  
     + b  
     + c;  
-(code-block)  
+```  
 Option 2 (end_of_line):  
-(code-block)csharp  
+```csharp  
 var sum = a +  
     b +  
     c;  
-(code-block)  
+```  
 
 ---
 ## 27. dotnet_style_prefer_auto_properties  
@@ -448,14 +448,14 @@ var sum = a +
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public int Age { get; set; }  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 private int _age;  
 public int Age { get => _age; set => _age = value; }  
-(code-block)  
+```  
 
 ---
 ## 28. dotnet_style_prefer_collection_expression  
@@ -463,13 +463,13 @@ public int Age { get => _age; set => _age = value; }
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 var list = [1, 2, 3];  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 var list = new List<int> { 1, 2, 3 };  
-(code-block)  
+```  
 
 ---
 ## 29. dotnet_style_prefer_compound_assignment  
@@ -477,13 +477,13 @@ var list = new List<int> { 1, 2, 3 };
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 x += 1;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 x = x + 1;  
-(code-block)  
+```  
 
 ---
 ## 30. dotnet_style_prefer_conditional_expression_over_assignment  
@@ -491,15 +491,15 @@ x = x + 1;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var result = condition ? "Yes" : "No";  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 string result;  
 if (condition) result = "Yes";  
 else result = "No";  
-(code-block)  
+```  
 
 ---
 ## 31. dotnet_style_prefer_conditional_expression_over_return  
@@ -507,14 +507,14 @@ else result = "No";
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 return condition ? "Yes" : "No";  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 if (condition) return "Yes";  
 return "No";  
-(code-block)  
+```  
 
 ---
 ## 32. dotnet_style_prefer_foreach_explicit_cast_in_source  
@@ -522,13 +522,13 @@ return "No";
 \
 **Examples**  
 Option 1  
-(code-block)csharp  
+```csharp  
 foreach (string x in collectionOfObjects) { }  
-(code-block)  
+```  
 Option 2  
-(code-block)csharp  
+```csharp  
 foreach (var x in collectionOfObjects.Cast<string>()) { }  
-(code-block)  
+```  
 
 ---
 ## 33. dotnet_style_prefer_inferred_anonymous_type_member_names  
@@ -536,13 +536,13 @@ foreach (var x in collectionOfObjects.Cast<string>()) { }
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var anon = new { FirstName, LastName };  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var anon = new { FirstName = FirstName, LastName = LastName };  
-(code-block)  
+```  
 
 ---
 ## 34. dotnet_style_prefer_inferred_tuple_names  
@@ -550,13 +550,13 @@ var anon = new { FirstName = FirstName, LastName = LastName };
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var person = (firstName, lastName);  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var person = (firstName: firstName, lastName: lastName);  
-(code-block)  
+```  
 
 ---
 ## 35. dotnet_style_prefer_is_null_check_over_reference_equality_method  
@@ -564,13 +564,13 @@ var person = (firstName: firstName, lastName: lastName);
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 if (obj is null) { }  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 if (ReferenceEquals(obj, null)) { }  
-(code-block)  
+```  
 
 ---
 ## 36. dotnet_style_prefer_simplified_boolean_expressions  
@@ -578,13 +578,13 @@ if (ReferenceEquals(obj, null)) { }
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 if (flag) { }  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 if (flag == true) { }  
-(code-block)  
+```  
 
 ---
 ## 37. dotnet_style_prefer_simplified_interpolation  
@@ -592,13 +592,13 @@ if (flag == true) { }
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 $"Hello {name}";  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 $"Hello {name.ToString()}";  
-(code-block)  
+```  
 
 ---
 ## 38. dotnet_style_readonly_field  
@@ -606,13 +606,13 @@ $"Hello {name.ToString()}";
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 private readonly int _count = 0;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 private int _count = 0;  
-(code-block)  
+```  
 
 ---
 ## 39. dotnet_code_quality_unused_parameters  
@@ -620,13 +620,13 @@ private int _count = 0;
 \
 **Examples**  
 Option 1 (align with interface):  
-(code-block)csharp  
+```csharp  
 void IInterface.Method(int unused) { }  
-(code-block)  
+```  
 Option 2 (warning):  
-(code-block)csharp  
+```csharp  
 void Method(int unused) { } // Warning  
-(code-block)  
+```  
 
 ---
 ## 40. dotnet_remove_unnecessary_suppression_exclusions  
@@ -642,20 +642,20 @@ void Method(int unused) { } // Warning
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 if (condition)  
 {  
     DoSomething();  
 } DoSomethingElse();  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 if (condition)  
 {  
     DoSomething();  
 }  
 DoSomethingElse();  
-(code-block)  
+```  
 
 ---
 ## 43. csharp_style_var_elsewhere  
@@ -663,13 +663,13 @@ DoSomethingElse();
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 int x = 0;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var x = 0;  
-(code-block)  
+```  
 
 ---
 ## 44. csharp_style_var_for_built_in_types  
@@ -677,13 +677,13 @@ var x = 0;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var x = 0;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 int x = 0;  
-(code-block)  
+```  
 
 ---
 ## 45. csharp_style_var_when_type_is_apparent  
@@ -691,13 +691,13 @@ int x = 0;
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var stream = new MemoryStream();  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 MemoryStream stream = new MemoryStream();  
-(code-block)  
+```  
 
 ---
 ## 46. csharp_style_expression_bodied_accessors  
@@ -705,13 +705,13 @@ MemoryStream stream = new MemoryStream();
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public int Age => _age;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public int Age { get { return _age; } }  
-(code-block)  
+```  
 
 ---
 ## 47. csharp_style_expression_bodied_constructors  
@@ -719,16 +719,16 @@ public int Age { get { return _age; } }
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public Person() => Name = "Unknown";  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public Person()  
 {  
     Name = "Unknown";  
 }  
-(code-block)  
+```  
 
 ---
 ## 48. csharp_style_expression_bodied_indexers  
@@ -736,16 +736,16 @@ public Person()
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public int this[int index] => _items[index];  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public int this[int index]  
 {  
     get { return _items[index]; }  
 }  
-(code-block)  
+```  
 
 ---
 ## 49. csharp_style_expression_bodied_lambdas  
@@ -753,16 +753,16 @@ public int this[int index]
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 var func = x => x * 2;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var func = x =>  
 {  
     return x * 2;  
 };  
-(code-block)  
+```  
 
 ---
 ## 50. csharp_style_expression_bodied_local_functions  
@@ -770,16 +770,16 @@ var func = x =>
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 int Sum(int a, int b) => a + b;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 int Sum(int a, int b)  
 {  
     return a + b;  
 }  
-(code-block)  
+```  
 
 ---
 ## 51. csharp_style_expression_bodied_methods  
@@ -787,16 +787,16 @@ int Sum(int a, int b)
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public int GetValue() => 42;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public int GetValue()  
 {  
     return 42;  
 }  
-(code-block)  
+```  
 
 ---
 ## 52. csharp_style_expression_bodied_operators  
@@ -804,16 +804,16 @@ public int GetValue()
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public static Vector operator +(Vector a, Vector b) => new(a.X + b.X, a.Y + b.Y);  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public static Vector operator +(Vector a, Vector b)  
 {  
     return new Vector(a.X + b.X, a.Y + b.Y);  
 }  
-(code-block)  
+```  
 
 ---
 ## 53. csharp_style_expression_bodied_properties  
@@ -821,16 +821,16 @@ public static Vector operator +(Vector a, Vector b)
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 public int MyProperty => _myField;  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 public int MyProperty  
 {  
     get { return _myField; }  
 }  
-(code-block)  
+```  
 
 ---
 ## 54. csharp_style_pattern_matching_over_as_with_null_check  
@@ -838,14 +838,14 @@ public int MyProperty
 \
 **Examples**  
 When True  
-(code-block)csharp  
+```csharp  
 if (obj is MyClass c) { }  
-(code-block)  
+```  
 When False  
-(code-block)csharp  
+```csharp  
 var c = obj as MyClass;  
 if (c != null) { }  
-(code-block)  
+```  
 
 ---
 ## 55. csharp_style_pattern_matching_over_is_with_cast_check
