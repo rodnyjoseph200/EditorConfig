@@ -1,6 +1,8 @@
-# .editorconfig Rules
+# Editorconfig
 
-## Table of Content
+<details>
+
+<summary> Table of Content </summary>
 
 - [1. indent_size](#1-indent_size)
 - [2. indent_style](#2-indent_style)
@@ -140,3 +142,710 @@
 - [136. dotnet_diagnostic.IDE0130.severity](#136-dotnet_diagnosticide0130severity)
 - [137. dotnet_diagnostic.CS1591.severity](#137-dotnet_diagnosticcs1591severity)
 - [138. csharp_prefer_system_threading_lock](#138-csharp_prefer_system_threading_lock)
+
+</details>
+
+# Rules
+
+---
+## 1. indent_size  
+**Description**: Defines the number of spaces used for each indentation level.  
+
+---
+## 2. indent_style  
+**Description**: Defines whether to use spaces or tabs for indentation.  
+
+---
+## 3. tab_width  
+**Description**: Sets the number of columns used to represent a tab character if `indent_style=tab`.  
+
+---
+## 4. end_of_line  
+**Description**: Sets the line ending character(s) to use (e.g., `crlf` for Windows).  
+
+---
+## 5. insert_final_newline  
+**Description**: Specifies whether to ensure the file ends with a newline.  
+
+---
+## 6. dotnet_separate_import_directive_groups  
+**Description**: Controls whether using directives are separated into groups by blank lines.  
+
+---
+## 7. dotnet_sort_system_directives_first  
+**Description**: Enforces whether 'System' namespaces come first in usings.  
+
+---
+## 8. file_header_template  
+**Description**: Controls the file header text inserted in new files.  
+
+---
+## 9. dotnet_style_qualification_for_event  
+**Description**: Enforces use of `this.` qualifier for events.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+this.eventHandler?.Invoke(this, EventArgs.Empty);  
+(code-block)  
+When False  
+(code-block)csharp  
+eventHandler?.Invoke(this, EventArgs.Empty);  
+(code-block)  
+
+---
+## 10. dotnet_style_qualification_for_field  
+**Description**: Enforces use of `this.` qualifier for fields.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+this.myField = 10;  
+(code-block)  
+When False  
+(code-block)csharp  
+myField = 10;  
+(code-block)  
+
+---
+## 11. dotnet_style_qualification_for_method  
+**Description**: Enforces use of `this.` qualifier for methods.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+this.DoSomething();  
+(code-block)  
+When False  
+(code-block)csharp  
+DoSomething();  
+(code-block)  
+
+---
+## 12. dotnet_style_qualification_for_property  
+**Description**: Enforces use of `this.` qualifier for properties.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+this.MyProperty = 5;  
+(code-block)  
+When False  
+(code-block)csharp  
+MyProperty = 5;  
+(code-block)  
+
+---
+## 13. dotnet_style_predefined_type_for_locals_parameters_members  
+**Description**: Prefers language keywords (e.g., `int`) over BCL types (e.g., `Int32`).  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+int x = 0;  
+(code-block)  
+When False  
+(code-block)csharp  
+Int32 x = 0;  
+(code-block)  
+
+---
+## 14. dotnet_style_predefined_type_for_member_access  
+**Description**: Prefers language keywords when accessing static members.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+string.Empty;  
+(code-block)  
+When False  
+(code-block)csharp  
+String.Empty;  
+(code-block)  
+
+---
+## 15. dotnet_style_parentheses_in_arithmetic_binary_operators  
+**Description**: Enforces parentheses around arithmetic expressions for clarity.  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+(a + b) * c;  
+(code-block)  
+Option 2  
+(code-block)csharp  
+a + b * c;  
+(code-block)  
+
+---
+## 16. dotnet_style_parentheses_in_other_binary_operators  
+**Description**: Enforces parentheses for non-arithmetic binary operators.  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+(x & y) == 0;  
+(code-block)  
+Option 2  
+(code-block)csharp  
+x & y == 0;  
+(code-block)  
+
+---
+## 17. dotnet_style_parentheses_in_other_operators  
+**Description**: Controls parentheses usage for cast/unary operators.  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+(int)x + 1;  
+(code-block)  
+Option 2  
+(code-block)csharp  
+(int)x + (1);  
+(code-block)  
+
+---
+## 18. dotnet_style_parentheses_in_relational_binary_operators  
+**Description**: Enforces parentheses around relational operators.  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+(a < b) == true;  
+(code-block)  
+Option 2  
+(code-block)csharp  
+a < b == true;  
+(code-block)  
+
+---
+## 19. dotnet_style_require_accessibility_modifiers  
+**Description**: Enforces accessibility keywords on members.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public void MyMethod() { }  
+(code-block)  
+When False  
+(code-block)csharp  
+void MyMethod() { }  
+(code-block)  
+
+---
+## 20. dotnet_style_coalesce_expression  
+**Description**: Prefers `??` operator over conditional expressions for null checks.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var result = value ?? "default";  
+(code-block)  
+When False  
+(code-block)csharp  
+var result = value != null ? value : "default";  
+(code-block)  
+
+---
+## 21. dotnet_style_collection_initializer  
+**Description**: Enforces using collection initializers.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var list = new List<int> { 1, 2, 3 };  
+(code-block)  
+When False  
+(code-block)csharp  
+var list = new List<int>();  
+list.Add(1);  
+list.Add(2);  
+list.Add(3);  
+(code-block)  
+
+---
+## 22. dotnet_style_explicit_tuple_names  
+**Description**: Ensures tuple elements have explicit names.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+(int Id, string Name) person = (1, "John");  
+(code-block)  
+When False  
+(code-block)csharp  
+(int, string) person = (1, "John");  
+(code-block)  
+
+---
+## 23. dotnet_style_namespace_match_folder  
+**Description**: Enforces that namespaces match the folder structure.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+// File: MyProject/Utilities/Logger.cs  
+namespace MyProject.Utilities;  
+(code-block)  
+When False  
+(code-block)csharp  
+// File: MyProject/Utilities/Logger.cs  
+namespace SomeRandomName;  
+(code-block)  
+
+---
+## 24. dotnet_style_null_propagation  
+**Description**: Prefers `?.` operator over explicit null checks.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var length = str?.Length;  
+(code-block)  
+When False  
+(code-block)csharp  
+var length = str == null ? 0 : str.Length;  
+(code-block)  
+
+---
+## 25. dotnet_style_object_initializer  
+**Description**: Enforces using object initializers.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var person = new Person { Name = "Alice", Age = 30 };  
+(code-block)  
+When False  
+(code-block)csharp  
+var person = new Person();  
+person.Name = "Alice";  
+person.Age = 30;  
+(code-block)  
+
+---
+## 26. dotnet_style_operator_placement_when_wrapping  
+**Description**: Sets operator placement when wrapping lines.  
+\
+**Examples**  
+Option 1 (beginning_of_line):  
+(code-block)csharp  
+var sum = a  
+    + b  
+    + c;  
+(code-block)  
+Option 2 (end_of_line):  
+(code-block)csharp  
+var sum = a +  
+    b +  
+    c;  
+(code-block)  
+
+---
+## 27. dotnet_style_prefer_auto_properties  
+**Description**: Prefers auto-properties over explicit backing fields.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public int Age { get; set; }  
+(code-block)  
+When False  
+(code-block)csharp  
+private int _age;  
+public int Age { get => _age; set => _age = value; }  
+(code-block)  
+
+---
+## 28. dotnet_style_prefer_collection_expression  
+**Description**: Prefers collection expressions (e.g., `[1, 2, 3]`).  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+var list = [1, 2, 3];  
+(code-block)  
+Option 2  
+(code-block)csharp  
+var list = new List<int> { 1, 2, 3 };  
+(code-block)  
+
+---
+## 29. dotnet_style_prefer_compound_assignment  
+**Description**: Prefers compound assignment operators (e.g., `+=`).  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+x += 1;  
+(code-block)  
+When False  
+(code-block)csharp  
+x = x + 1;  
+(code-block)  
+
+---
+## 30. dotnet_style_prefer_conditional_expression_over_assignment  
+**Description**: Prefers conditional expressions over `if` statements for assignments.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var result = condition ? "Yes" : "No";  
+(code-block)  
+When False  
+(code-block)csharp  
+string result;  
+if (condition) result = "Yes";  
+else result = "No";  
+(code-block)  
+
+---
+## 31. dotnet_style_prefer_conditional_expression_over_return  
+**Description**: Prefers conditional expressions over `if` statements for returns.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+return condition ? "Yes" : "No";  
+(code-block)  
+When False  
+(code-block)csharp  
+if (condition) return "Yes";  
+return "No";  
+(code-block)  
+
+---
+## 32. dotnet_style_prefer_foreach_explicit_cast_in_source  
+**Description**: Prefers explicit casting in `foreach` loops when types are known.  
+\
+**Examples**  
+Option 1  
+(code-block)csharp  
+foreach (string x in collectionOfObjects) { }  
+(code-block)  
+Option 2  
+(code-block)csharp  
+foreach (var x in collectionOfObjects.Cast<string>()) { }  
+(code-block)  
+
+---
+## 33. dotnet_style_prefer_inferred_anonymous_type_member_names  
+**Description**: Omits redundant property names in anonymous types.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var anon = new { FirstName, LastName };  
+(code-block)  
+When False  
+(code-block)csharp  
+var anon = new { FirstName = FirstName, LastName = LastName };  
+(code-block)  
+
+---
+## 34. dotnet_style_prefer_inferred_tuple_names  
+**Description**: Omits redundant tuple element names.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var person = (firstName, lastName);  
+(code-block)  
+When False  
+(code-block)csharp  
+var person = (firstName: firstName, lastName: lastName);  
+(code-block)  
+
+---
+## 35. dotnet_style_prefer_is_null_check_over_reference_equality_method  
+**Description**: Prefers `is null` over `ReferenceEquals(obj, null)`.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+if (obj is null) { }  
+(code-block)  
+When False  
+(code-block)csharp  
+if (ReferenceEquals(obj, null)) { }  
+(code-block)  
+
+---
+## 36. dotnet_style_prefer_simplified_boolean_expressions  
+**Description**: Prefers simplified boolean expressions.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+if (flag) { }  
+(code-block)  
+When False  
+(code-block)csharp  
+if (flag == true) { }  
+(code-block)  
+
+---
+## 37. dotnet_style_prefer_simplified_interpolation  
+**Description**: Prefers simplified string interpolation.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+$"Hello {name}";  
+(code-block)  
+When False  
+(code-block)csharp  
+$"Hello {name.ToString()}";  
+(code-block)  
+
+---
+## 38. dotnet_style_readonly_field  
+**Description**: Enforces `readonly` for immutable fields.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+private readonly int _count = 0;  
+(code-block)  
+When False  
+(code-block)csharp  
+private int _count = 0;  
+(code-block)  
+
+---
+## 39. dotnet_code_quality_unused_parameters  
+**Description**: Configures how unused parameters are handled.  
+\
+**Examples**  
+Option 1 (align with interface):  
+(code-block)csharp  
+void IInterface.Method(int unused) { }  
+(code-block)  
+Option 2 (warning):  
+(code-block)csharp  
+void Method(int unused) { } // Warning  
+(code-block)  
+
+---
+## 40. dotnet_remove_unnecessary_suppression_exclusions  
+**Description**: Controls which suppressions are considered unnecessary.  
+
+---
+## 41. dotnet_style_allow_multiple_blank_lines_experimental  
+**Description**: Controls whether multiple consecutive blank lines are allowed.  
+
+---
+## 42. dotnet_style_allow_statement_immediately_after_block_experimental  
+**Description**: Controls whether statements can follow closing braces on the same line.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+if (condition)  
+{  
+    DoSomething();  
+} DoSomethingElse();  
+(code-block)  
+When False  
+(code-block)csharp  
+if (condition)  
+{  
+    DoSomething();  
+}  
+DoSomethingElse();  
+(code-block)  
+
+---
+## 43. csharp_style_var_elsewhere  
+**Description**: Controls `var` usage for non-built-in types.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+int x = 0;  
+(code-block)  
+When False  
+(code-block)csharp  
+var x = 0;  
+(code-block)  
+
+---
+## 44. csharp_style_var_for_built_in_types  
+**Description**: Enforces `var` for built-in types.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var x = 0;  
+(code-block)  
+When False  
+(code-block)csharp  
+int x = 0;  
+(code-block)  
+
+---
+## 45. csharp_style_var_when_type_is_apparent  
+**Description**: Enforces `var` when the type is obvious.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var stream = new MemoryStream();  
+(code-block)  
+When False  
+(code-block)csharp  
+MemoryStream stream = new MemoryStream();  
+(code-block)  
+
+---
+## 46. csharp_style_expression_bodied_accessors  
+**Description**: Enforces expression-bodied syntax for property accessors.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public int Age => _age;  
+(code-block)  
+When False  
+(code-block)csharp  
+public int Age { get { return _age; } }  
+(code-block)  
+
+---
+## 47. csharp_style_expression_bodied_constructors  
+**Description**: Enforces expression-bodied syntax for constructors.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public Person() => Name = "Unknown";  
+(code-block)  
+When False  
+(code-block)csharp  
+public Person()  
+{  
+    Name = "Unknown";  
+}  
+(code-block)  
+
+---
+## 48. csharp_style_expression_bodied_indexers  
+**Description**: Enforces expression-bodied syntax for indexers.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public int this[int index] => _items[index];  
+(code-block)  
+When False  
+(code-block)csharp  
+public int this[int index]  
+{  
+    get { return _items[index]; }  
+}  
+(code-block)  
+
+---
+## 49. csharp_style_expression_bodied_lambdas  
+**Description**: Enforces expression-bodied syntax for lambdas.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+var func = x => x * 2;  
+(code-block)  
+When False  
+(code-block)csharp  
+var func = x =>  
+{  
+    return x * 2;  
+};  
+(code-block)  
+
+---
+## 50. csharp_style_expression_bodied_local_functions  
+**Description**: Enforces expression-bodied syntax for local functions.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+int Sum(int a, int b) => a + b;  
+(code-block)  
+When False  
+(code-block)csharp  
+int Sum(int a, int b)  
+{  
+    return a + b;  
+}  
+(code-block)  
+
+---
+## 51. csharp_style_expression_bodied_methods  
+**Description**: Enforces expression-bodied syntax for methods.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public int GetValue() => 42;  
+(code-block)  
+When False  
+(code-block)csharp  
+public int GetValue()  
+{  
+    return 42;  
+}  
+(code-block)  
+
+---
+## 52. csharp_style_expression_bodied_operators  
+**Description**: Enforces expression-bodied syntax for operator overloads.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public static Vector operator +(Vector a, Vector b) => new(a.X + b.X, a.Y + b.Y);  
+(code-block)  
+When False  
+(code-block)csharp  
+public static Vector operator +(Vector a, Vector b)  
+{  
+    return new Vector(a.X + b.X, a.Y + b.Y);  
+}  
+(code-block)  
+
+---
+## 53. csharp_style_expression_bodied_properties  
+**Description**: Enforces expression-bodied syntax for properties.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+public int MyProperty => _myField;  
+(code-block)  
+When False  
+(code-block)csharp  
+public int MyProperty  
+{  
+    get { return _myField; }  
+}  
+(code-block)  
+
+---
+## 54. csharp_style_pattern_matching_over_as_with_null_check  
+**Description**: Prefers pattern matching over `as` + null check.  
+\
+**Examples**  
+When True  
+(code-block)csharp  
+if (obj is MyClass c) { }  
+(code-block)  
+When False  
+(code-block)csharp  
+var c = obj as MyClass;  
+if (c != null) { }  
+(code-block)  
+
+---
+## 55. csharp_style_pattern_matching_over_is_with_cast_check
