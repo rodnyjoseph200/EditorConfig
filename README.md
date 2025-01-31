@@ -1,8 +1,8 @@
-# .NET Editorconfig
+# .NET EditorConfig
 
 <details>
 
-<summary> Table of Content </summary>
+<summary> ## Table of Content </summary>
 
 - [1. indent_size](#1-indent_size)
 - [2. indent_style](#2-indent_style)
@@ -145,9 +145,9 @@
 
 </details>
 
+---
 # Rules
 
----
 ## 1. indent_size  
 **Description**: Defines the number of spaces used for each indentation level.  
 
