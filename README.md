@@ -1580,3 +1580,515 @@ switch (value)
 When False  
 ```csharp  
 switch (value)  
+{  
+case 1:  
+    DoSomething();  
+    break;  
+}  
+```  
+
+---
+## 101. csharp_indent_case_contents_when_block  
+**Description**: Enforces indentation of `case` blocks with braces.  
+\
+**Examples**  
+When True  
+```csharp  
+case 1:  
+{  
+    DoSomething();  
+    break;  
+}  
+```  
+When False  
+```csharp  
+case 1:  
+{  
+DoSomething();  
+break;  
+}  
+```  
+
+---
+## 102. csharp_indent_labels  
+**Description**: Controls indentation level of labels.  
+\
+**Examples**  
+Option 1 (one_less_than_current):  
+```csharp  
+    labelName:  
+        DoSomething();  
+```  
+Option 2:  
+```csharp  
+labelName:  
+    DoSomething();  
+```  
+
+---
+## 103. csharp_indent_switch_labels  
+**Description**: Enforces indentation of `switch` labels (`case`, `default`).  
+\
+**Examples**  
+When True  
+```csharp  
+switch (value)  
+{  
+    case 1:  
+        break;  
+}  
+```  
+When False  
+```csharp  
+switch (value)  
+{  
+case 1:  
+    break;  
+}  
+```  
+
+---
+## 104. csharp_space_after_cast  
+**Description**: Controls spacing after cast operators.  
+\
+**Examples**  
+When True  
+```csharp  
+(int) x;  
+```  
+When False  
+```csharp  
+(int)x;  
+```  
+
+---
+## 105. csharp_space_after_colon_in_inheritance_clause  
+**Description**: Controls spacing after `:` in base class/interface list.  
+\
+**Examples**  
+When True  
+```csharp  
+class Derived : Base { }  
+```  
+When False  
+```csharp  
+class Derived :Base { }  
+```  
+
+---
+## 106. csharp_space_after_comma  
+**Description**: Controls spacing after commas.  
+\
+**Examples**  
+When True  
+```csharp  
+var tuple = (1, 2);  
+```  
+When False  
+```csharp  
+var tuple = (1,2);  
+```  
+
+---
+## 107. csharp_space_after_dot  
+**Description**: Controls spacing after a dot.  
+\
+**Examples**  
+When True  
+```csharp  
+obj. Property;  
+```  
+When False  
+```csharp  
+obj.Property;  
+```  
+
+---
+## 108. csharp_space_after_keywords_in_control_flow_statements  
+**Description**: Enforces spacing after keywords like `if`, `for`, `while`, etc.  
+\
+**Examples**  
+When True  
+```csharp  
+if (condition) { }  
+```  
+When False  
+```csharp  
+if(condition) { }  
+```  
+
+---
+## 109. csharp_space_after_semicolon_in_for_statement  
+**Description**: Enforces spacing after semicolons in `for` statements.  
+\
+**Examples**  
+When True  
+```csharp  
+for (int i = 0; i < 10; i++) { }  
+```  
+When False  
+```csharp  
+for (int i = 0;i < 10;i++) { }  
+```  
+
+---
+## 110. csharp_space_around_binary_operators  
+**Description**: Controls spacing around binary operators.  
+\
+**Examples**  
+When True  
+```csharp  
+a + b;  
+```  
+When False  
+```csharp  
+a+b;  
+```  
+
+---
+## 111. csharp_space_around_declaration_statements  
+**Description**: Controls spacing around declaration statements.  
+\
+**Examples**  
+When True  
+```csharp  
+int  x   =  0;  
+```  
+When False  
+```csharp  
+int x = 0;  
+```  
+
+---
+## 112. csharp_space_before_colon_in_inheritance_clause  
+**Description**: Controls spacing before `:` in base class/interface list.  
+\
+**Examples**  
+When True  
+```csharp  
+class Derived : Base { }  
+```  
+When False  
+```csharp  
+class Derived: Base { }  
+```  
+
+---
+## 113. csharp_space_before_comma  
+**Description**: Controls spacing before commas.  
+\
+**Examples**  
+When True  
+```csharp  
+var tuple = (1 , 2);  
+```  
+When False  
+```csharp  
+var tuple = (1, 2);  
+```  
+
+---
+## 114. csharp_space_before_dot  
+**Description**: Controls spacing before a dot.  
+\
+**Examples**  
+When True  
+```csharp  
+obj .Property;  
+```  
+When False  
+```csharp  
+obj.Property;  
+```  
+
+---
+## 115. csharp_space_before_open_square_brackets  
+**Description**: Controls spacing before `[` in attributes or indexers.  
+\
+**Examples**  
+When True  
+```csharp  
+[ Obsolete]  
+```  
+When False  
+```csharp  
+[Obsolete]  
+```  
+
+---
+## 116. csharp_space_before_semicolon_in_for_statement  
+**Description**: Controls spacing before semicolons in `for` statements.  
+\
+**Examples**  
+When True  
+```csharp  
+for (int i = 0 ; i < 10 ; i++) { }  
+```  
+When False  
+```csharp  
+for (int i = 0; i < 10; i++) { }  
+```  
+
+---
+## 117. csharp_space_between_empty_square_brackets  
+**Description**: Controls spacing between empty brackets `[]`.  
+\
+**Examples**  
+When True  
+```csharp  
+new int[ 0 ];  
+```  
+When False  
+```csharp  
+new int[0];  
+```  
+
+---
+## 118. csharp_space_between_method_call_empty_parameter_list_parentheses  
+**Description**: Controls spacing in empty parameter lists.  
+\
+**Examples**  
+When True  
+```csharp  
+Method( );  
+```  
+When False  
+```csharp  
+Method();  
+```  
+
+---
+## 119. csharp_space_between_method_call_name_and_opening_parenthesis  
+**Description**: Controls spacing between method name and `(`.  
+\
+**Examples**  
+When True  
+```csharp  
+Method (arg);  
+```  
+When False  
+```csharp  
+Method(arg);  
+```  
+
+---
+## 120. csharp_space_between_method_call_parameter_list_parentheses  
+**Description**: Controls spacing within parameter parentheses.  
+\
+**Examples**  
+When True  
+```csharp  
+Method(a, b);  
+```  
+When False  
+```csharp  
+Method(a,b);  
+```  
+
+---
+## 121. csharp_space_between_method_declaration_empty_parameter_list_parentheses  
+**Description**: Controls spacing in empty parameter lists for methods.  
+\
+**Examples**  
+When True  
+```csharp  
+void Method( );  
+```  
+When False  
+```csharp  
+void Method();  
+```  
+
+---
+## 122. csharp_space_between_method_declaration_name_and_open_parenthesis  
+**Description**: Controls spacing between method name and `(`.  
+\
+**Examples**  
+When True  
+```csharp  
+void Method (string x);  
+```  
+When False  
+```csharp  
+void Method(string x);  
+```  
+
+---
+## 123. csharp_space_between_method_declaration_parameter_list_parentheses  
+**Description**: Controls spacing within method parameter parentheses.  
+\
+**Examples**  
+When True  
+```csharp  
+void Method(int x, int y);  
+```  
+When False  
+```csharp  
+void Method(int x,int y);  
+```  
+
+---
+## 124. csharp_space_between_parentheses  
+**Description**: Controls spacing inside parentheses in expressions.  
+\
+**Examples**  
+When True  
+```csharp  
+( x + y );  
+```  
+When False  
+```csharp  
+(x + y);  
+```  
+
+---
+## 125. csharp_space_between_square_brackets  
+**Description**: Controls spacing inside square brackets.  
+\
+**Examples**  
+When True  
+```csharp  
+array[ 0 ];  
+```  
+When False  
+```csharp  
+array[0];  
+```  
+
+---
+## 126. csharp_preserve_single_line_blocks  
+**Description**: Controls whether single-line blocks are kept on one line.  
+\
+**Examples**  
+When True  
+```csharp  
+if (condition) { DoSomething(); }  
+```  
+When False  
+```csharp  
+if (condition)  
+{  
+    DoSomething();  
+}  
+```  
+
+---
+## 127. csharp_preserve_single_line_statements  
+**Description**: Controls whether single-line statements remain on one line.  
+\
+**Examples**  
+When True  
+```csharp  
+if (condition) DoSomething();  
+```  
+When False  
+```csharp  
+if (condition)  
+{  
+    DoSomething();  
+}  
+```  
+
+---
+## 128. dotnet_naming_rule.interface_should_be_begins_with_i  
+**Description**: Enforces interface names to start with `I`.  
+\
+**Examples**  
+When True  
+```csharp  
+public interface IMyInterface { }  
+```  
+When False  
+```csharp  
+public interface MyInterface { }  
+```  
+
+---
+## 129. dotnet_naming_rule.types_should_be_pascal_case  
+**Description**: Enforces PascalCase for types (class, struct, enum, interface).  
+\
+**Examples**  
+When True  
+```csharp  
+public class MyClass { }  
+```  
+When False  
+```csharp  
+public class myClass { }  
+```  
+
+---
+## 130. dotnet_naming_rule.non_field_members_should_be_pascal_case  
+**Description**: Enforces PascalCase for non-field members (properties, events, methods).  
+\
+**Examples**  
+When True  
+```csharp  
+public void MyMethod() { }  
+```  
+When False  
+```csharp  
+public void myMethod() { }  
+```  
+
+---
+## 131. trim_trailing_whitespace  
+**Description**: Enforces removing trailing whitespace at the end of lines.  
+\
+**Examples**  
+When True  
+```csharp  
+"Line with no trailing spaces"  
+```  
+When False  
+```csharp  
+"Line with trailing spaces   "  
+```  
+
+---
+## 132. dotnet_diagnostic.IDE0005.severity  
+**Description**: Configures severity for unnecessary usings (Roslyn analyzers).  
+\
+**Examples**  
+When True  
+```csharp  
+using System; // if actually needed  
+```  
+When False  
+```csharp  
+using System; // if not used  
+```  
+
+---
+## 133. dotnet_diagnostic.IDE1006.severity  
+**Description**: Configures severity for naming rule violations.  
+
+---
+## 134. dotnet_diagnostic.CS8019.severity  
+**Description**: Configures severity for unnecessary usings (C# compiler).  
+
+---
+## 135. dotnet_diagnostic.IDE0079.severity  
+**Description**: Configures severity for redundant suppression of diagnostics.  
+
+---
+## 136. dotnet_diagnostic.IDE0130.severity  
+**Description**: Configures severity for inconsistent `nameof` usage.  
+
+---
+## 137. dotnet_diagnostic.CS1591.severity  
+**Description**: Configures severity for missing XML comment warnings.  
+
+---
+## 138. csharp_prefer_system_threading_lock  
+**Description**: Enforces using `lock` keyword over `Monitor.Enter`.  
+\
+**Examples**  
+When True  
+```csharp  
+lock (locker) { /* ... */ }  
+```  
+When False  
+```csharp  
+Monitor.Enter(locker); // manually  
+```  
